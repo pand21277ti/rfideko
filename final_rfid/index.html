@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <title>Smart RFID - SMK Ekonomika</title>
+    <meta name="description" content="Sistem Presensi Kartu RFID Real-time 2 Titik Pintu dengan Pencegahan Double Tap, Audio Chime, Monitor Kiosk, dan Management Admin." />
+    <meta property="og:title" content="Smart RFID - SMK Ekonomika" />
+    <meta property="og:description" content="Sistem Presensi Kartu RFID Real-time 2 Titik Pintu dengan Pencegahan Double Tap, Audio Chime, Monitor Kiosk, dan Management Admin." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script>
+      (function() {
+        try {
+          var k = '__storage_guard__';
+          window.localStorage.setItem(k, k);
+          window.localStorage.removeItem(k);
+        } catch (e) {
+          console.warn('localStorage is restricted or unavailable. Initializing memory fallback store.');
+          var store = {};
+          var fallback = {
+            getItem: function(key) { return Object.prototype.hasOwnProperty.call(store, key) ? store[key] : null; },
+            setItem: function(key, val) { store[key] = String(val); },
+            removeItem: function(key) { delete store[key]; },
+            clear: function() { store = {}; },
+            key: function(i) { return Object.keys(store)[i] || null; },
+            get length() { return Object.keys(store).length; }
+          };
+          try {
+            Object.defineProperty(window, 'localStorage', { value: fallback, configurable: true, writable: true });
+          } catch (_) {}
+        }
+      })();
+    </script>
+  </head>
+  <body class="bg-[#070d1e] text-slate-100 min-h-screen">
+    <div id="root" class="min-h-screen w-full"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
